@@ -232,6 +232,14 @@ a {
         justify-content: space-evenly;
     }
 
+    .about-page-image {
+        height: 25%;
+    }
+
+    .about-page {
+        height: 75%;
+    }
+
     .about-page-title{
         background-image: linear-gradient(to top,
         #808080 0%,
