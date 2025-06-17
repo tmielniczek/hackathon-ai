@@ -8,12 +8,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const setHeroHeight = () => {
             const windowHeight = window.innerHeight;
             heroElement.style.height = `${windowHeight}px`;
+            console.log(heroElement.style.height);
         };
 
         // 1. Set height initially when the page loads
         setHeroHeight();
-
-        // 2. Add listener to adjust height when the window is resized
-        window.addEventListener('resize', setHeroHeight);
     }
 });
