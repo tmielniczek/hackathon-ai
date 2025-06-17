@@ -1,0 +1,257 @@
+/* Import Geist fonts from Vercel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Color Variables */
+:root {
+    --bg-primary: black;
+    --color-primary: #FAFAFA;
+    --color-text: #EEEEEE;
+    --color-accent: #FF4500;
+}
+
+/* Typography */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.font-mono {
+    font-family: 'SF Mono', Monaco, 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography Scale */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+/* Custom CSS for Landing Page */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.hero-section{
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.about-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+.about-page-title {
+    background-image: linear-gradient(to left,
+    #808080 0%,
+    #A5A5A5 30%,
+    #C8C8C8 60%,
+    #EEEEEE 90% /* Ends with #E5E5E5 */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-page-image {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/sun41.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.about-page-text {
+    font-family: 'SF Mono', monospace;
+}
+
+.button {
+    font-family: 'SF Mono', monospace;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background-color: #FF4500;
+    border: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #FF6347;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-underline: none;
+}
+
+.bi-arrow-down-short{
+    font-size: 32px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.why-attend-section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-attend-section h2 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+}
+
+.features-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.feature-item {
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.feature-item .icon {
+    color: var(--color-accent);
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; /* Adjust icon size as needed */
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.cta-reinforce-section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+}
+
+.cta-reinforce-section h2 {
+    margin-bottom: 2rem;
+}
+
+.spacer {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.footer {
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-page {
+        justify-content: space-evenly;
+    }
+
+    .about-page-title{
+        background-image: linear-gradient(to top,
+        #808080 0%,
+        #A5A5A5 30%,
+        #C8C8C8 60%,
+        #EEEEEE 90% /* Ends with #E5E5E5 */
+        );
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
